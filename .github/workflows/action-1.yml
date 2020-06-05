@@ -2,7 +2,7 @@ name: Do Something That Needs Scheduled
 
 on:
   repository_dispatch:
-    types: trigger-action-1
+    types: action-1
   schedule:
     - cron:  '*/5 * * * *'
 
@@ -11,8 +11,5 @@ jobs:
     name: Run Some Scheduled Thing
     runs-on: ubuntu-latest
     steps:
-      - name: Repository Dispatch
-        uses: peter-evans/repository-dispatch@v1.1.1
-
       - name: Do Something
         run: echo Doing Something...
