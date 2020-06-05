@@ -11,6 +11,8 @@ jobs:
     name: Run Some Scheduled Thing
     runs-on: ubuntu-latest
     steps:
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v1.1.1
 
       - name: Do Something
         run: echo Doing Something...
