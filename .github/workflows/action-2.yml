@@ -1,11 +1,10 @@
 - name: Repository Dispatch
   uses: peter-evans/repository-dispatch@v1.1.1
-  with:
+
+    with:
     # A repo scoped GitHub Personal Access Token
-    token: 
+    token: ${{ secrets.REPO_ACCESS_TOKEN }}
     # The full name of the repository to send the dispatch.
-    repository: # optional, default is ${{ github.repository }}
-    # A custom webhook event name.
-    event-type: 
-    # JSON payload with extra information about the webhook event that your action or worklow may use.
-    client-payload: # optional, default is {}
+    repository: rickrain/actions-test
+
+    
