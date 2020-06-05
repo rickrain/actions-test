@@ -4,7 +4,7 @@ on:
   repository_dispatch:
     types: action-1
   schedule:
-    - cron:  '*/5 * * * *'
+    - cron:  '*/10 * * * *'
 
 jobs:
   build:
